@@ -11,6 +11,7 @@
 #define IDS_ERROR_LOADING_APPLICATION   109
 #define IDS_SETTINGS_ERROR              110
 #define IDS_NOT_ENABLED                 111
+#define IDS_ALREADY_RUNNING             112
 #define IDM_EXIT                        124
 #define IDM_ENABLED                     125
 #define IDM_STATUS                      126

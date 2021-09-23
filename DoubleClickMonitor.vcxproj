@@ -193,6 +193,11 @@
   <ItemGroup>
     <ClInclude Include="Resource.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="mousehook\MouseHook.vcxproj">
+      <Project>{16a2c5db-171f-4ab6-b306-edf883d752d8}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

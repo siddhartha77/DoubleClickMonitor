@@ -17,12 +17,14 @@ BOOL        g_bEnabled = TRUE;
 INT         g_nMonitorButtons = 0;
 INT         g_nTimeoutMilliseconds = 0;
 
+// Use a uid to uniquely identify our icon
+UINT        g_uid = 0xD343693C;
+
 UINT const WMAPP_NOTIFYCALLBACK = WM_APP + 1;
 
 wchar_t const szWindowClass[] = L"DoubleClickMonitor";
 
-// Use a guid to uniquely identify our icon
-class __declspec(uuid("2EC38AD7-3376-4C48-A8A9-31CC116B628C")) MouseIcon;
+
 
 // Forward declarations of functions included in this code module:
 void                RegisterWindowClass(PCWSTR pszClassName, PCWSTR pszMenuName, WNDPROC lpfnWndProc);
@@ -39,7 +41,11 @@ int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR /*lpCmdLine*/, int n
     HWND hwExistingHandle = FindWindow(szWindowClass, NULL);
 
     if (hwExistingHandle) {
-        MessageBox(hwExistingHandle, L"Double Click Monitor is already running.", NULL, MB_ICONEXCLAMATION);
+        WCHAR szAlreadyRunning[128];
+
+        LoadString(g_hInst, IDS_ALREADY_RUNNING, szAlreadyRunning, 128);
+        MessageBox(hwExistingHandle, szAlreadyRunning, NULL, MB_ICONEXCLAMATION);
+
         return -1;
     }        
 
@@ -87,7 +93,7 @@ BOOL AddNotificationIcon(HWND hwnd) {
     // add the icon, setting the icon, tooltip, and callback message.
     // the icon will be identified with the GUID
     nid.uFlags = NIF_ICON | NIF_TIP | NIF_MESSAGE | NIF_SHOWTIP | NIF_GUID;
-    nid.guidItem = __uuidof(MouseIcon);
+    nid.uID = g_uid;
     nid.uCallbackMessage = WMAPP_NOTIFYCALLBACK;
     HRESULT hr = LoadIconMetric(g_hInst, MAKEINTRESOURCE(IDI_NOTIFICATIONICON), LIM_SMALL, &nid.hIcon);
 
@@ -108,8 +114,7 @@ BOOL AddNotificationIcon(HWND hwnd) {
 
 BOOL DeleteNotificationIcon() {
     NOTIFYICONDATA nid = { sizeof(nid) };
-    nid.uFlags = NIF_GUID;
-    nid.guidItem = __uuidof(MouseIcon);
+    nid.uID = g_uid;
     return Shell_NotifyIcon(NIM_DELETE, &nid);
 }
 

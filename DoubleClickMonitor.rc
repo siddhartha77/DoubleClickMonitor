@@ -96,12 +96,17 @@ BEGIN
     IDS_TOOLTIP             "Double Click Monitor"
     IDS_STATUS              "Prevented %u accidental double clicks."
     IDS_STATUS_BOX          "Double Click Monitor Status"
-    IDS_WEBSITE             "https://www.github.com/"
+    IDS_WEBSITE             "https://github.com/siddhartha77/DoubleClickMonitor"
     IDS_SETTINGS_FILE_PATH  ".\\settings.ini"
     IDS_ERROR_LOADING_APPLICATION 
                             "There was an error loading the application."
     IDS_SETTINGS_ERROR      "Error creating settings.ini"
     IDS_NOT_ENABLED         "Double Click Monitor is not enabled. Would you like to enable it?"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ALREADY_RUNNING     "Double Click Monitor is already running."
 END
 
 #endif    // English (United States) resources
