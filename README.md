@@ -17,5 +17,8 @@ A DLL intercepts all mouse clicks with [LowLevelMouseProc](https://docs.microsof
 # Settings
 A settings.ini is created that is used to define the timer as well as which mouse buttons to monitor. Note that if you change any settings you will have to restart the program before they take effect.
 
+# Bugs
+When quitting, the icon won't disappear. I know it's annoying, but it's a Windows "feature". Unless the executable is signed, the icon is tied to the executable path, meaning if you move the program, it won't load. You can [read more about it here](https://docs.microsoft.com/en-us/windows/win32/api/shellapi/nf-shellapi-shell_notifyicona#nim_delete-0x00000002).
+
 # Licence
 Do whatever you want with this code and program.
