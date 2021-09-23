@@ -24,8 +24,6 @@ UINT const WMAPP_NOTIFYCALLBACK = WM_APP + 1;
 
 wchar_t const szWindowClass[] = L"DoubleClickMonitor";
 
-
-
 // Forward declarations of functions included in this code module:
 void                RegisterWindowClass(PCWSTR pszClassName, PCWSTR pszMenuName, WNDPROC lpfnWndProc);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
