@@ -1,0 +1,5 @@
+LIBRARY DLL1
+EXPORTS
+	SetHook
+	RemoveHook
+  GetCount
