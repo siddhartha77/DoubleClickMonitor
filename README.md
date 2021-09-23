@@ -2,7 +2,7 @@
 Eliminate double clicks due to failing mouse switches.
 
 # Binaries
-Pre-compiled binaries have been uploaded [here](https://github.com/siddhartha77/DoubleClickMonitor/tree/master/bin).
+Pre-compiled binaries have been uploaded [here](https://github.com/siddhartha77/DoubleClickMonitor/releases).
 
 # Compiling
 This solution was created with Microsoft Visual Studio Community 2019.
