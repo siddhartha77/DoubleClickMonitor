@@ -14,6 +14,9 @@ There are two projects:
 # How Does It Work?
 A DLL intercepts all mouse clicks with [LowLevelMouseProc](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/legacy/ms644986(v=vs.85)). If two clicks are detected within a timer range, the second click is discarded. The Double Click Monitor systray application hooks into the DLL and sets the timer and other settings.
 
+# Will This Set Off Anti-Cheat Software?
+I tested Apex Legends, which uses Easy Anti-Cheat, and everything worked fine.
+
 # Settings
 A settings.ini is created that is used to define the timer as well as which mouse buttons to monitor. Note that if you change any settings you will have to restart the program before they take effect.
 
