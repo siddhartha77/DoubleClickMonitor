@@ -23,5 +23,7 @@ A settings.ini is created that is used to define the timer as well as which mous
 # Bugs
 When quitting, the icon won't disappear. I know it's annoying, but it's a Windows "feature". Unless the executable is signed, the icon is tied to the executable path, meaning if you move the program, it won't load. You can [read more about it here](https://docs.microsoft.com/en-us/windows/win32/api/shellapi/nf-shellapi-shell_notifyicona#nim_delete-0x00000002).
 
+There's also an issue with really bad switches. When clicking and dragging, it's possible that the initial MouseDown will trigger an erroneous second click, thus cancelling the subsequent drag. Unfortunately there's no software solution for this. If you notice your drag events are stopping suddenly, it's definitely time for new switches.
+
 # Licence
 Do whatever you want with this code and program.
