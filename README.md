@@ -8,7 +8,7 @@ Pre-compiled binaries have been uploaded [here](https://github.com/siddhartha77/
 This solution was created with Microsoft Visual Studio Community 2019.
 
 There are two projects:
-* **MouseHook**: The DLL hook that will caption the low level mouse clicks.
+* **MouseHook**: The DLL hook that will capture the low level mouse clicks.
 * **DoubleClickMonitor**: The systray application.
 
 # How Does It Work?
